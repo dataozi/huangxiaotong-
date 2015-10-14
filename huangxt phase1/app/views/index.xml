@@ -1,0 +1,76 @@
+<Alloy>
+	<Collection src="webNews" />
+	<Collection src="Venue" />
+	<TabGroup>
+		<Tab title="Tab1" icon="KS_nav_ui.png"   id="main"> 
+			<Window title="News">
+				 <TableView dataCollection="webNews"  onClick="tableClick1" >
+	            	<TableViewRow layout="vertical"  fid="{id}" >
+                            <ImageView image="{image}" top="20dp" />
+                            <Label text="{shortDes}" bottom="20dp" /> 
+                    </TableViewRow>
+                    </TableView>
+			</Window>
+		</Tab>
+		
+		
+		
+		<Tab title="Tab2" icon="KS_nav_views.png" id="second">
+			<Window title="Events">
+ 				<TableView dataCollection="Venue" onClick ="tableClick2" dataTransform="catalog">
+ 					<TableViewSection headerTitle="{section}">
+ 						<TableViewRow title="{VenueName}" fid="{VenueID}"/>
+ 					</TableViewSection>
+ 				</TableView>
+			</Window>
+		</Tab>
+		
+		
+		
+		
+		
+		
+		<Tab title="Tab3" icon="KS_nav_views.png" id="eventTab">
+			<Window title="Infroday">
+	    <TableView onClick="tableClick">
+	            <TableViewSection headerTitle="">
+	            	   <TableViewRow title=" Cinema" fid="gis"/>
+	            </TableViewSection>
+	            <TableViewSection headerTitle=" ">
+	            	   <TableViewRow title="Acitivities" fid="comp"/>
+	            </TableViewSection>
+	            <TableViewSection headerTitle=" ">
+	            	   <TableViewRow title="Music department" fid="Music Society"/>
+	            </TableViewSection>
+	           
+	    </TableView>
+				
+			</Window>
+		</Tab>
+		
+		<Tab title="Tab4" icon="KS_nav_views.png" id="touch">
+			<Window title="Map" narBarHidden="true">
+				<Module id="mapView" module="ti.map" method="createView" userLocation="true" dataCollection="Venue" dataTransform="provideTitles" onClick="Clicktitle">
+	            </Module>
+			</Window>
+		</Tab>
+		
+		
+		
+		<Tab title="Tab5" icon="KS_nav_views.png">
+			<Window title="Information">
+				<TableView>
+		       		
+		       			   <TableViewSection headerTitle=" ">
+	            	   <TableViewRow title=" About HKBU" />
+	            </TableViewSection>
+	            <TableViewSection headerTitle=" ">
+	            	   <TableViewRow title="Log off or Log in" />
+	            </TableViewSection>
+	          
+		       			
+		        </TableView> 
+			</Window>
+		</Tab>
+	</TabGroup> 
+</Alloy>

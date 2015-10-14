@@ -1,0 +1,20 @@
+
+
+<Alloy>
+	<Collection src="webNews" />
+	   <Window title ="jump">
+	   	<TableView dataCollection="webNews" dataFilter="filterFunction" dataTransform="provideTitles">
+	   	     <TableViewRow layout="vertical">	
+	   	     <ImageView image="{image}" top="20dp" />
+	   	     <Label text="{fullDes}" button="20dp" />
+	   	     <Button title = "address" turn="{venue}" onClick="location"/>
+	   	     <!-- <RightNavButton>
+                    	<Button title="Reg" id="ButtonRightNav" onClick = "Click1"/>
+              </RightNavButton>
+	   	     -->
+	   	      </TableViewRow>  	 
+	   	</TableView>
+	   </Window>
+	   	 
+</Alloy>
+

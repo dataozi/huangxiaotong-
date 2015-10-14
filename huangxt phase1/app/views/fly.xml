@@ -1,0 +1,11 @@
+<Alloy>
+    <Collection src="webNews"/>
+     <Window title="fly">
+		
+	   		<TableView dataCollection="webNews" dataFilter="filterOrganizer" onClick= "Clickfly">
+	   	     	<TableViewRow layout="vertial" title="{name}" fid="{id}">
+	   	     	</TableViewRow>   	 
+	   		</TableView>
+	 
+     </Window>
+</Alloy>

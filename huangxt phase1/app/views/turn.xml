@@ -1,0 +1,8 @@
+<Alloy>
+	<Collection src="webNews" />
+	<Collection src="Venue" />
+			<Window title="specific" narBarHidden="true">	                                       
+                     <Module id="mapView" module="ti.map" method="createView" 
+                     userLocation="true" dataCollection="Venue"  dataFilter="filterFunction" dataTransform="transform1"/>                   
+			</Window>	
+</Alloy>
